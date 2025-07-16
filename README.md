@@ -71,7 +71,21 @@ python scripts/train_model.py
 - จะได้ไฟล์ `data/exercise_classifier.joblib` (โมเดลที่ train แล้ว)
 - จะแสดงผลการทดสอบโมเดล (classification report) ใน terminal
 
-### 4.3 ทำนายท่าทางจากวิดีโอใหม่
+### 4.3 ทำนายท่าทางจากวิดีโอใหม่ (User-friendly)
+
+**เวอร์ชันใหม่: ใช้งานง่ายขึ้น!**
+
+- สามารถรันได้เลยโดยไม่ต้องใส่ argument:
+
+```bash
+python scripts/predict_video.py
+```
+
+- จะมีเมนูให้เลือกไฟล์วิดีโอ input จากโฟลเดอร์ตัวอย่าง (เช่น Plank)
+- โปรแกรมจะตั้งชื่อไฟล์ output ให้อัตโนมัติในโฟลเดอร์ `results/` (เช่น `results/10 Second Plank_output.mp4`)
+- ไม่ต้องจำ path หรือชื่อไฟล์
+
+**หรือจะใส่ argument แบบเดิมก็ได้:**
 
 ```bash
 python scripts/predict_video.py --input [input_video] --output [output_video]
@@ -80,10 +94,16 @@ python scripts/predict_video.py --input [input_video] --output [output_video]
 - ตัวอย่าง:
 
 ```bash
-python scripts/predict_video.py --input videos/test.mp4 --output results/output.mp4
+python scripts/predict_video.py --input videos/Plank/10\ Second\ Plank.mp4 --output results/output.mp4
 ```
 
 - จะได้วิดีโอใหม่ที่มี label ท่าทางแสดงในแต่ละ frame
+
+**หมายเหตุ:**
+
+- ถ้าไม่ใส่ --output โปรแกรมจะตั้งชื่อ output ให้อัตโนมัติ
+- ถ้าไม่ใส่ --input จะมีเมนูให้เลือกไฟล์ input
+- รองรับทั้ง .mp4, .avi, .mov
 
 ---
 
@@ -92,6 +112,7 @@ python scripts/predict_video.py --input videos/test.mp4 --output results/output.
 - **extract_landmarks.py**: ดึง pose landmarks จากวิดีโอใน `videos/` แล้วบันทึกเป็นไฟล์ .npy
 - **train_model.py**: เทรน RandomForestClassifier จากไฟล์ .npy แล้วบันทึกโมเดล
 - **predict_video.py**: โหลดโมเดล ทำนายท่าทางจากวิดีโอใหม่ แล้วเขียน label ลงบนวิดีโอ
+  - **เวอร์ชันใหม่:** รองรับ interactive mode เลือกไฟล์ input/output ได้สะดวก ไม่ต้องจำ path
 
 ---
 
