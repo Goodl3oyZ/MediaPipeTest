@@ -1,0 +1,10 @@
+fastapi
+strawberry-graphql
+uvicorn
+sqlalchemy
+psycopg2-binary
+pydantic
+python-jose
+rq
+redis
+boto3
