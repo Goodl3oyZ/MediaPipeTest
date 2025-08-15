@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.env
+.env
+.venv/
+venv/
+env/
+*.egg-info/
+*.egg
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# VSCode
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data/Model/Output (ที่ไม่ควรขึ้น git)
+data/*.npy
+data/*.joblib
+data/*.pkl
+data/*.h5
+data/*.csv
+data/*.json
+results/
+*.mp4
+*.avi
+*.mov
+
+# Environment/Secrets
+backend/.env
+.env
+
+# Logs
+*.log
+
+# Other
+*.bak
+*.swp
