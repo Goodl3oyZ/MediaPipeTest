@@ -51,7 +51,7 @@ exercise_labels = [
     "Sled Push",
     "Sled Pull",
     "Battle Rope",
-    "Box Jump"
+    "Box Jump",
 ]
 
 for label in exercise_labels:
