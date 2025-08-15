@@ -8,3 +8,4 @@ python-jose
 rq
 redis
 boto3
+python-multipart
