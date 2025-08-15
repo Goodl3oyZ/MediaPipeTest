@@ -15,10 +15,10 @@ services:
 
   backend:
     build:
-      context: ./virtual_trainer_ai/backend
+      context: ../backend
     command: uvicorn main:app --host 0.0.0.0 --port 8000 --reload
     volumes:
-      - ./virtual_trainer_ai/backend:/app
+      - ../backend:/app
     ports:
       - "8000:8000"
     environment:
